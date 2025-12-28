@@ -65,7 +65,7 @@
     </div>
 
     <div class="server-info">
-        <p>🖥 სერვერის IP: <strong>Geonation.aternos.me</strong></p>
+        <p>🖥 სერვერის IP: <strong>Geonation.exaroton.me</strong></p>
     </div>
 
     <div class="pickaxe">
