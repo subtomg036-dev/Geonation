@@ -144,7 +144,7 @@ margin:20px;
 border-radius:20px;
 background:#111;
 box-shadow:0 0 10px #00ff66;
-width:200px;
+width:220px;
 transition:0.3s;
 }
 
@@ -191,6 +191,11 @@ padding-bottom:100px;
 font-size:40px;
 margin-bottom:40px;
 text-shadow:0 0 10px #00ff66;
+}
+
+.rank-price{
+margin-top:10px;
+color:#00ff88;
 }
 
 </style>
@@ -250,20 +255,41 @@ Players: <span id="players" class="loading">Checking</span>
 
 </div>
 
-<!-- RANKS SECTION -->
+<!-- RANKS -->
 
 <div class="ranks">
 
 <div class="rank-title">Server Ranks</div>
 
-<div class="box">💎 ADMIN</div>
-<div class="box">⚔️ WARRIOR</div>
-<div class="box">⚜️ ELITE</div>
-<div class="box">👾 HELPER</div>
-<div class="box">🛡️ TITAN</div>
-<div class="box">👤 MEMBER</div>
-<div class="box">🟣 MEDIA</div>
-<div class="box">🔨 MOD</div>
+<div class="box">
+<h3>💎 ADMIN</h3>
+<p class="rank-price">2 GEL</p>
+</div>
+
+<div class="box">
+<h3>⚔️ WARRIOR</h3>
+<p class="rank-price">1 GEL</p>
+</div>
+
+<div class="box">
+<h3>⚜️ ELITE</h3>
+<p class="rank-price">1.5 GEL</p>
+</div>
+
+<div class="box">
+<h3>🛡️ TITAN</h3>
+<p class="rank-price">1 GEL</p>
+</div>
+
+<div class="box">
+<h3>👤 MEMBER</h3>
+<p class="rank-price">Free</p>
+</div>
+
+<div class="box">
+<h3>🟣 MEDIA</h3>
+<p class="rank-price">DM on Discord</p>
+</div>
 
 </div>
 
