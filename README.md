@@ -7,17 +7,18 @@
 
 <style>
 
-/* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
 
-/* ===== BODY ===== */
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background: radial-gradient(circle at top,#0b1a35,#02050d);
 color:white;
 overflow-x:hidden;
 }
 
-/* ===== FLOATING NAVBAR ===== */
 .navbar{
 position:fixed;
 top:20px;
@@ -52,6 +53,7 @@ gap:25px;
 color:white;
 text-decoration:none;
 opacity:.7;
+cursor:pointer;
 }
 
 .links a:hover{opacity:1}
@@ -63,7 +65,6 @@ border-radius:10px;
 cursor:pointer;
 }
 
-/* ===== HERO ===== */
 .hero{
 text-align:center;
 padding-top:160px;
@@ -86,7 +87,6 @@ background:rgba(0,191,255,0.1);
 border:1px solid rgba(0,191,255,0.3);
 }
 
-/* ===== STORE ===== */
 .store{
 display:flex;
 justify-content:center;
@@ -111,16 +111,8 @@ transform:translateY(-10px) scale(1.03);
 box-shadow:0 0 25px rgba(0,191,255,0.4);
 }
 
-.card h2{
-color:#00c3ff;
-margin-bottom:10px;
-}
-
-.price{
-margin-bottom:15px;
-font-size:20px;
-}
-
+.card h2{color:#00c3ff;margin-bottom:10px;}
+.price{margin-bottom:15px;font-size:20px;}
 .buy{
 background:linear-gradient(90deg,#00c3ff,#0077ff);
 padding:10px;
@@ -130,21 +122,21 @@ cursor:pointer;
 width:100%;
 }
 
-/* ===== GAMEMODE ===== */
-.gamemode{
+.section-title{
 text-align:center;
-padding:60px;
+font-size:32px;
+margin-top:30px;
+color:#00c3ff;
 }
 
-.mode{
-display:inline-block;
-padding:30px;
-background:rgba(255,255,255,0.05);
-border-radius:15px;
-border:1px solid rgba(255,255,255,0.1);
+.op-items{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:40px;
 }
 
-/* ===== BG EFFECT ===== */
 .circle{
 position:fixed;
 width:200px;
@@ -169,67 +161,62 @@ animation:float 10s infinite;
 <div class="circle" style="top:20%;left:10%"></div>
 <div class="circle" style="top:70%;left:80%"></div>
 
-<!-- NAVBAR -->
 <div class="navbar">
 <div class="logo">GEONATION</div>
 
 <div class="links">
 <a href="#">მთავარი</a>
-<a href="#">რანკები</a>
-<a href="#">სერვერი</a>
+<a href="#ranks">რანკები</a>
+<a href="#items">ნივთები</a>
 </div>
 
-<div class="ip" onclick="copyIP()">geonation.fidelis.ge</div>
+<div class="ip" onclick="copyIP()">Copy IP</div>
 </div>
 
-<!-- HERO -->
 <section class="hero">
 <h1>GEONATION</h1>
 <p>ქართული Minecraft სერვერი</p>
 <div class="status" id="status">იტვირთება...</div>
 </section>
 
-<!-- STORE -->
-<section class="store">
-
-<div class="card">
-<h2>TITAN</h2>
-<div class="price">1 GEL</div>
-<button class="buy">ყიდვა</button>
-</div>
-
-<div class="card">
-<h2>WIZARD</h2>
-<div class="price">3 GEL</div>
-<button class="buy">ყიდვა</button>
-</div>
-
-<div class="card">
-<h2>ELITE</h2>
-<div class="price">2.49 GEL</div>
-<button class="buy">ყიდვა</button>
-</div>
-
-<div class="card">
-<h2>BOOSTER</h2>
-<div class="price">3.99 GEL</div>
-<button class="buy">ყიდვა</button>
-</div>
-
-<div class="card">
-<h2>VIP</h2>
-<div class="price">5.49 GEL</div>
-<button class="buy">ყიდვა</button>
-</div>
-
+<!-- RANKS -->
+<section class="store" id="ranks">
+<div class="card"><h2>TITAN</h2><div class="price">1 GEL</div><button class="buy">ყიდვა</button></div>
+<div class="card"><h2>WIZARD</h2><div class="price">3 GEL</div><button class="buy">ყიდვა</button></div>
+<div class="card"><h2>ELITE</h2><div class="price">2.49 GEL</div><button class="buy">ყიდვა</button></div>
+<div class="card"><h2>BOOSTER</h2><div class="price">3.99 GEL</div><button class="buy">ყიდვა</button></div>
+<div class="card"><h2>VIP</h2><div class="price">5.49 GEL</div><button class="buy">ყიდვა</button></div>
 </section>
 
-<!-- GAMEMODE -->
-<section class="gamemode">
-<h2>SMP Vanilla</h2>
-<div class="mode">
-სუფთა survival გამოცდილება
+<h2 class="section-title">Server OP Items</h2>
+
+<!-- ITEMS -->
+<section class="op-items" id="items">
+
+<div class="card">
+<h2>Amethyst Pickaxe</h2>
+<div class="price">4.99 GEL</div>
+<button class="buy">ყიდვა</button>
 </div>
+
+<div class="card">
+<h2>Amethyst Axe</h2>
+<div class="price">2.99 GEL</div>
+<button class="buy">ყიდვა</button>
+</div>
+
+<div class="card">
+<h2>$100k</h2>
+<div class="price">0.99 GEL</div>
+<button class="buy">ყიდვა</button>
+</div>
+
+<div class="card">
+<h2>$1M</h2>
+<div class="price">8.99 GEL</div>
+<button class="buy">ყიდვა</button>
+</div>
+
 </section>
 
 <script>
